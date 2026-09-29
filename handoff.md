@@ -1,6 +1,6 @@
 # tahun1-mt-pecahan（燕菜切切乐）交接档
 
-> 状态：**开发中，已可玩，等老师本机实测**｜最后更新：2026-09-29
+> 状态：**v1.0 已上线**（2026-09-29）｜工具 https://tahun1-mt-pecahan.vercel.app ｜点子铺已登记（含 DSKP 3.1/3.2 索引、排行榜）
 
 ## 这个工具在做什么
 一年级数学 DSKP 3.0 分数（3.1 二等份和四等份：1/2、1/4、2/4、3/4；3.2 日常应用题）。
@@ -41,13 +41,19 @@
 `python3 -m http.server 8931` 后跑 `python3 test-e2e.py`（Python Playwright），三个模式走完 39 项检查，截图在 `.playwright-output/`。
 `window.__pecahan` 暴露场景给测试用。
 
+## 上线纪录（2026-09-29）
+- GitHub `kongsi-idea/tahun1-mt-pecahan`；Vercel 项目 `tahun1-mt-pecahan`（kongsi-idea team）。工具 commit `cc67db1` → `bde2c59` → `65c3dad`（?board=1 深链）。
+- Supabase（kongsi-idea project `gntnkhkkgonaehapcerr`）：`kongsi-idea/supabase/migration-2026-09-29-tahun1-mt-pecahan-scores.sql` 已执行。表 `tahun1_mt_pecahan_scores` 公开可读；写入只能透过 `submit_tahun1_mt_pecahan_score`（同班同名留最好一次，访客每局一笔）。已实测：anon 直接 insert 被 RLS 挡（401）、超出满分被拒、测试资料已删。
+- 只有「燕菜铺开张」上排行榜（满分 30 星）。进店前「谁来当店长」：有 ?code= 就点名单；没有可写名字当访客，或不写名字（不上榜）。共用「换班级」按钮只在首页显示（游戏中会压住声音按钮）。
+- 点子铺 commit `f665748`，`vercel --prod` → alias `kongsi-idea.vercel.app` → curl 确认线上 app.js／dskp-index.js 有新工具、缩图 200；浏览器实测卡片、详情、开始使用链接、搜 perempat 都正常。
+- 测试：`test-e2e.py`（默认拦截 Supabase、带假名单 ?code=TEST-1I，不会写进真排行榜；`TARGET=线上网址` 可测正式站）、`test-mobile.py`。
+
 ## 已知问题／待办
 - 老师 09-29 实测：游戏整体 OK；朗读已改预录人声，待老师再听一次确认
 - 没有一年级数学课本分数单元原文，读法「二分之一」与直式写法待对课本
 - 「燕菜」叫法待老师确认
 - Windows 学校电脑与课室一体机触控未实测
-- 马来文 DSKP 用词未查证 → 暂不收进 kongsi-idea/data/dskp-index.js
 - 自由切切到 8 块以上时，小屏幕上分数牌会挤
 
 ## 下一步
-老师实测确认 → git init／`gh repo create kongsi-idea/tahun1-mt-pecahan --public --source=. --push` → `vercel link --scope kongsi-idea` → 部署（单个工具不在 guard 名单，需老师用 `!` 前缀跑）→ 截图 → Hub TOOLS 登记 + published-tools-coverage.md
+等课堂反馈。改版时照 teaching-tools/agents.md「每次上线新版本 Hub 必须同步」五步走（version/changelog、正式网址重截图、coverage 备注、tools-status、Hub 部署三步）。
