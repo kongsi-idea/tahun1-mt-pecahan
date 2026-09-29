@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>燕菜切切乐 · 一年级分数</title>
+  <meta name="description" content="一年级数学·分数：用刀切燕菜，认识二分之一、四分之一、四分之二、四分之三。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Ma+Shan+Zheng&family=Noto+Sans+SC:wght@500;700;900&family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app">
+
+    <!-- ── 首页 ───────────────────────────── -->
+    <section id="home" class="screen is-active" aria-label="首页">
+      <div class="home-inner">
+        <header class="shop-sign" aria-label="燕菜切切乐">
+          <span class="sign-corner tl"></span><span class="sign-corner tr"></span>
+          <span class="sign-corner bl"></span><span class="sign-corner br"></span>
+          <h1>燕菜切切乐</h1>
+          <p class="sign-sub">一年级数学 · 分数</p>
+        </header>
+
+        <div class="home-body">
+          <div class="hero">
+            <canvas id="heroCanvas" aria-label="一盘西瓜燕菜，点一点会抖"></canvas>
+            <p class="hero-tip">点一点燕菜，它会抖哦！</p>
+          </div>
+
+          <nav class="mode-list" aria-label="选择玩法">
+            <button class="mode-card" data-mode="share">
+              <span class="mode-emoji" data-emoji="1f43c"></span>
+              <span class="mode-text">
+                <strong>分给朋友</strong>
+                <small>学一学：切得一样大，才公平</small>
+              </span>
+              <span class="mode-go">›</span>
+            </button>
+            <button class="mode-card" data-mode="shop">
+              <span class="mode-emoji" data-emoji="1f36e"></span>
+              <span class="mode-text">
+                <strong>燕菜铺开张</strong>
+                <small>考一考：客人要几分之几？</small>
+              </span>
+              <span class="mode-go">›</span>
+            </button>
+            <button class="mode-card" data-mode="free">
+              <span class="mode-emoji" data-emoji="1f52a"></span>
+              <span class="mode-text">
+                <strong>自由切</strong>
+                <small>老师示范：想怎么切就怎么切</small>
+              </span>
+              <span class="mode-go">›</span>
+            </button>
+          </nav>
+        </div>
+
+        <button class="board-link" id="btnHomeBoard">🏆 燕菜铺排行榜</button>
+        <p class="home-foot">认识 <span class="frac sm"><b>1</b><i></i><b>2</b></span> <span class="frac sm"><b>1</b><i></i><b>4</b></span> <span class="frac sm"><b>2</b><i></i><b>4</b></span> <span class="frac sm"><b>3</b><i></i><b>4</b></span> · 用鼠标或手指在燕菜上划一条线就能切</p>
+      </div>
+    </section>
+
+    <!-- ── 游戏 ───────────────────────────── -->
+    <section id="game" class="screen" aria-label="游戏">
+      <header class="topbar">
+        <button class="icon-btn" id="btnHome" aria-label="回首页" title="回首页">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11.5 12 4l8 7.5M6.5 9.5V20h11V9.5" /></svg>
+        </button>
+        <div class="mini-sign" id="modeTitle">分给朋友</div>
+        <ol class="studs" id="studs" aria-label="进度"></ol>
+        <div class="top-tools">
+          <button class="toggle" id="btnSnap" aria-pressed="true" title="帮手刀：切的线会自动对齐">
+            <span class="toggle-dot"></span>帮手刀
+          </button>
+          <button class="icon-btn" id="btnSound" aria-pressed="true" aria-label="声音" title="声音">
+            <svg viewBox="0 0 24 24" aria-hidden="true" class="ico-on"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z" /><path d="M15.5 9a4 4 0 0 1 0 6M18 6.5a7.5 7.5 0 0 1 0 11" /></svg>
+            <svg viewBox="0 0 24 24" aria-hidden="true" class="ico-off"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z" /><path d="m16 9.5 5 5m0-5-5 5" /></svg>
+          </button>
+        </div>
+      </header>
+
+      <main class="stage">
+        <div class="table-wrap">
+          <canvas id="gameCanvas" aria-label="大理石桌上的燕菜，用刀划线来切"></canvas>
+        </div>
+
+        <aside class="panel" id="panel" aria-live="polite">
+          <div class="task">
+            <div class="task-head">
+              <span class="avatar" id="taskAvatar"></span>
+              <span class="who" id="taskWho">燕菜铺</span>
+              <button class="speak" id="btnSpeak" aria-label="再听一次" title="再听一次">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z" /><path d="M15.5 9a4 4 0 0 1 0 6M18 6.5a7.5 7.5 0 0 1 0 11" /></svg>
+              </button>
+            </div>
+            <p class="say" id="taskSay"></p>
+          </div>
+
+          <div class="hint" id="hint"></div>
+          <div class="result" id="result" hidden></div>
+          <div class="choices" id="choices" hidden></div>
+          <div class="free-tools" id="freeTools" hidden>
+            <button class="shape-btn" data-shape="circle"><span class="shape-ico circle"></span>圆形</button>
+            <button class="shape-btn" data-shape="square"><span class="shape-ico square"></span>正方形</button>
+            <button class="shape-btn" data-shape="rect"><span class="shape-ico rect"></span>长方形</button>
+          </div>
+
+          <div class="actions" id="actions">
+            <button class="btn ghost" id="btnReset">↺ 重新切</button>
+            <button class="btn primary" id="btnMain">✓ 切好了</button>
+          </div>
+        </aside>
+      </main>
+    </section>
+
+    <!-- ── 结算 ───────────────────────────── -->
+    <div class="overlay" id="endOverlay" hidden>
+      <div class="end-card" role="dialog" aria-labelledby="endTitle">
+        <div class="end-stars" id="endStars"></div>
+        <h2 id="endTitle">太棒了！</h2>
+        <p id="endText"></p>
+        <p class="end-save" id="endSave" hidden></p>
+        <div class="end-actions">
+          <button class="btn ghost" id="btnEndHome">回首页</button>
+          <button class="btn primary" id="btnEndAgain">再玩一次</button>
+        </div>
+        <div class="end-more" id="endMore" hidden>
+          <button class="link-btn" id="btnEndSwap">换人玩</button>
+          <button class="link-btn" id="btnEndBoard">🏆 看排行榜</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── 选店长（燕菜铺开张前） ─────────── -->
+    <div class="overlay" id="pickOverlay" hidden>
+      <div class="pick-card" role="dialog" aria-labelledby="pickTitle">
+        <h2 id="pickTitle">谁来当店长？</h2>
+        <p class="pick-sub" id="pickSub">正在读取班级名单…</p>
+        <div class="pick-grid" id="pickGrid"></div>
+        <form class="pick-form" id="pickForm" hidden>
+          <input id="pickName" maxlength="20" placeholder="写你的名字" autocomplete="off">
+          <button class="btn primary" type="submit">开始</button>
+        </form>
+        <div class="pick-actions">
+          <button class="link-btn" id="btnPickGuest">不写名字，直接玩（不上排行榜）</button>
+          <button class="link-btn" id="btnPickCancel">回首页</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── 排行榜 ───────────────────────── -->
+    <div class="overlay" id="boardOverlay" hidden>
+      <div class="board-card" role="dialog" aria-labelledby="boardTitle">
+        <h2 id="boardTitle">🏆 燕菜铺排行榜</h2>
+        <div class="board-tabs" id="boardTabs">
+          <button data-scope="class" class="on">本班</button>
+          <button data-scope="all">全部</button>
+        </div>
+        <ol class="board-list" id="boardList"></ol>
+        <button class="btn ghost" id="btnBoardClose">关闭</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 班级名单与排行榜：课堂点子铺共用的 Supabase 客户端（连不上时自动变成访客模式） -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="https://kongsi-idea.vercel.app/data/supabase-client.js"></script>
+  <script src="https://kongsi-idea.vercel.app/data/class-code-client.js"></script>
+  <script src="audio/manifest.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

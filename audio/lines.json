@@ -1,0 +1,447 @@
+[
+ {
+  "text": "还没切哦！用刀在燕菜上划一条线。",
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "key": "9a2be9d2"
+ },
+ {
+  "text": "不公平！有的大，有的小。每一块要一样大才行。",
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "key": "1e8b9088"
+ },
+ {
+  "text": "想怎么切就怎么切！切成一样大，看看是几分之几。",
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "key": "5c9adc3e"
+ },
+ {
+  "text": "有2位朋友来吃西瓜燕菜。切一切，每人要一样多！",
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "key": "096b9121"
+ },
+ {
+  "text": "块数不够分给2位朋友，再切一切！",
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "key": "b8a9f25f"
+ },
+ {
+  "text": "这些块分给2位朋友，分不完哦。再来一次。",
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "key": "f00d9270"
+ },
+ {
+  "text": "切得一样大，真公平！每人得到二分之一。",
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "key": "38a0b867"
+ },
+ {
+  "text": "切得一样大，真公平！每人得到四分之二。",
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "key": "558a72aa"
+ },
+ {
+  "text": "切得一样大，真公平！每人得到六分之三。",
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "key": "50132d7d"
+ },
+ {
+  "text": "切得一样大，真公平！每人得到八分之四。",
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "key": "42aa69c9"
+ },
+ {
+  "text": "切得一样大，真公平！每人得到十分之五。",
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "key": "5e583456"
+ },
+ {
+  "text": "切得一样大，真公平！每人得到12分之六。",
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "key": "24306d7b"
+ },
+ {
+  "text": "有2位朋友来吃斑斓椰浆燕菜。切一切，每人要一样多！",
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "key": "6b61920c"
+ },
+ {
+  "text": "有4位朋友来吃芒果燕菜。切一切，每人要一样多！",
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "key": "008fb3b1"
+ },
+ {
+  "text": "块数不够分给4位朋友，再切一切！",
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "key": "0398439d"
+ },
+ {
+  "text": "这些块分给4位朋友，分不完哦。再来一次。",
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "key": "24a42f46"
+ },
+ {
+  "text": "切得一样大，真公平！每人得到四分之一。",
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "key": "e9b55a48"
+ },
+ {
+  "text": "切得一样大，真公平！每人得到八分之二。",
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "key": "df9a86a8"
+ },
+ {
+  "text": "切得一样大，真公平！每人得到12分之三。",
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "key": "46075921"
+ },
+ {
+  "text": "有4位朋友来吃玫瑰燕菜。切一切，每人要一样多！",
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "key": "fecb2c0f"
+ },
+ {
+  "text": "有4位朋友来吃咖啡燕菜。切一切，每人要一样多！",
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "key": "0dfee639"
+ },
+ {
+  "text": "我要这盘西瓜燕菜的二分之一。",
+  "voice": "zh-CN-YunxiaNeural",
+  "key": "1fef2aec"
+ },
+ {
+  "text": "要切成2块哦。数一数，现在有几块？",
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "key": "5f4b1e2d"
+ },
+ {
+  "text": "2块不一样大，这样不是二分之一哦。",
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "key": "4b89c87a"
+ },
+ {
+  "text": "切好了！每一块是二分之一。现在拿1块给我。",
+  "voice": "zh-CN-YunxiaNeural",
+  "key": "61511da9"
+ },
+ {
+  "text": "我要的是二分之一，就是1块。",
+  "voice": "zh-CN-YunxiaNeural",
+  "key": "b88175a1"
+ },
+ {
+  "text": "送到了！这是二分之一。",
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "key": "dd70b24d"
+ },
+ {
+  "text": "我拿走了这盘斑斓椰浆燕菜的几分之几？",
+  "voice": "zh-CN-XiaoyiNeural",
+  "key": "3276bf8f"
+ },
+ {
+  "text": "对了！整盘切成4块，拿走1块，就是四分之一。",
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "key": "d0f88ec1"
+ },
+ {
+  "text": "整盘一共切成几块？虚线的也要算进去。",
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "key": "e568cc86"
+ },
+ {
+  "text": "拿走了几块？数一数打包盒里的。",
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "key": "624e483d"
+ },
+ {
+  "text": "我要这盘玫瑰燕菜的四分之一。",
+  "voice": "zh-CN-YunxiaNeural",
+  "key": "4ec6f2b7"
+ },
+ {
+  "text": "要切成4块哦。数一数，现在有几块？",
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "key": "045a9dbb"
+ },
+ {
+  "text": "4块不一样大，这样不是四分之一哦。",
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "key": "3240f78d"
+ },
+ {
+  "text": "切好了！每一块是四分之一。现在拿1块给我。",
+  "voice": "zh-CN-YunxiaNeural",
+  "key": "1e5ac5be"
+ },
+ {
+  "text": "我要的是四分之一，就是1块。",
+  "voice": "zh-CN-YunxiaNeural",
+  "key": "dbcfffcc"
+ },
+ {
+  "text": "送到了！这是四分之一。",
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "key": "64f0dd12"
+ },
+ {
+  "text": "亮亮的这一块，是这盘燕菜的四分之一吗？",
+  "voice": "zh-CN-XiaoyiNeural",
+  "key": "66517cfb"
+ },
+ {
+  "text": "对了！4块不一样大，所以不是四分之一。",
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "key": "623e50f6"
+ },
+ {
+  "text": "要小心哦！4块不一样大，所以不是四分之一。",
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "key": "3d56c7dd"
+ },
+ {
+  "text": "我要这盘芒果燕菜的四分之三。",
+  "voice": "zh-CN-YunxiaNeural",
+  "key": "d4f413b4"
+ },
+ {
+  "text": "切好了！每一块是四分之一。现在拿3块给我。",
+  "voice": "zh-CN-YunxiaNeural",
+  "key": "5b6515a0"
+ },
+ {
+  "text": "我要的是四分之三，就是3块。",
+  "voice": "zh-CN-YunxiaNeural",
+  "key": "a86fa40d"
+ },
+ {
+  "text": "送到了！这是四分之三。",
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "key": "7c22e56f"
+ },
+ {
+  "text": "我拿走了这盘咖啡燕菜的几分之几？",
+  "voice": "zh-CN-YunxiaNeural",
+  "key": "ab2974d5"
+ },
+ {
+  "text": "对了！整盘切成4块，拿走2块，就是四分之二。",
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "key": "d7e7b9cc"
+ },
+ {
+  "text": "对了！4块一样大，每一块都是四分之一。长长的也可以！",
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "key": "8a01faa9"
+ },
+ {
+  "text": "其实是的！4块一样大，每一块都是四分之一。长长的也可以！",
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "key": "b44d57c9"
+ },
+ {
+  "text": "我要这盘咖啡燕菜的四分之二。",
+  "voice": "zh-CN-YunxiaNeural",
+  "key": "7c4a06d3"
+ },
+ {
+  "text": "切好了！每一块是四分之一。现在拿2块给我。",
+  "voice": "zh-CN-YunxiaNeural",
+  "key": "91ea0207"
+ },
+ {
+  "text": "我要的是四分之二，就是2块。",
+  "voice": "zh-CN-YunxiaNeural",
+  "key": "debc514f"
+ },
+ {
+  "text": "送到了！这是四分之二。",
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "key": "22e06cb0"
+ },
+ {
+  "text": "亮亮的这一块，是这盘燕菜的二分之一吗？",
+  "voice": "zh-CN-XiaoyiNeural",
+  "key": "1b1b813e"
+ },
+ {
+  "text": "对了！2块不一样大，所以不是二分之一。",
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "key": "f1db2e77"
+ },
+ {
+  "text": "要小心哦！2块不一样大，所以不是二分之一。",
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "key": "d8426730"
+ },
+ {
+  "text": "我拿走了这盘玫瑰燕菜的几分之几？",
+  "voice": "zh-CN-YunxiaNeural",
+  "key": "b8e31b9f"
+ },
+ {
+  "text": "对了！整盘切成4块，拿走3块，就是四分之三。",
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "key": "f21be37e"
+ },
+ {
+  "text": "继续加油！一共得到5颗星。",
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "key": "598bcf52"
+ },
+ {
+  "text": "继续加油！一共得到6颗星。",
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "key": "4f6fe30d"
+ },
+ {
+  "text": "继续加油！一共得到7颗星。",
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "key": "6e8fb5dc"
+ },
+ {
+  "text": "继续加油！一共得到8颗星。",
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "key": "50d2f527"
+ },
+ {
+  "text": "做得好！一共得到9颗星。",
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "key": "e56a0a67"
+ },
+ {
+  "text": "做得好！一共得到10颗星。",
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "key": "097cd891"
+ },
+ {
+  "text": "做得好！一共得到11颗星。",
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "key": "2d5addf0"
+ },
+ {
+  "text": "做得好！一共得到12颗星。",
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "key": "d27c0b67"
+ },
+ {
+  "text": "太棒了！一共得到13颗星。",
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "key": "78ec70bb"
+ },
+ {
+  "text": "太棒了！一共得到14颗星。",
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "key": "bac78260"
+ },
+ {
+  "text": "太棒了！一共得到15颗星。",
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "key": "c04e70c1"
+ },
+ {
+  "text": "继续加油！一共得到10颗星。",
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "key": "85cb5886"
+ },
+ {
+  "text": "继续加油！一共得到11颗星。",
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "key": "eda695d7"
+ },
+ {
+  "text": "继续加油！一共得到12颗星。",
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "key": "0f338620"
+ },
+ {
+  "text": "继续加油！一共得到13颗星。",
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "key": "e4e29481"
+ },
+ {
+  "text": "继续加油！一共得到14颗星。",
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "key": "d632d08a"
+ },
+ {
+  "text": "继续加油！一共得到15颗星。",
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "key": "eca9d27b"
+ },
+ {
+  "text": "继续加油！一共得到16颗星。",
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "key": "017e1894"
+ },
+ {
+  "text": "继续加油！一共得到17颗星。",
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "key": "ff2ef585"
+ },
+ {
+  "text": "做得好！一共得到18颗星。",
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "key": "0ab78b29"
+ },
+ {
+  "text": "做得好！一共得到19颗星。",
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "key": "49a14ee8"
+ },
+ {
+  "text": "做得好！一共得到20颗星。",
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "key": "0cb01aec"
+ },
+ {
+  "text": "做得好！一共得到21颗星。",
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "key": "77a88d9d"
+ },
+ {
+  "text": "做得好！一共得到22颗星。",
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "key": "0030fea2"
+ },
+ {
+  "text": "做得好！一共得到23颗星。",
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "key": "66e81633"
+ },
+ {
+  "text": "做得好！一共得到24颗星。",
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "key": "b6b4d278"
+ },
+ {
+  "text": "做得好！一共得到25颗星。",
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "key": "4f576439"
+ },
+ {
+  "text": "太棒了！一共得到26颗星。",
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "key": "c81c7973"
+ },
+ {
+  "text": "太棒了！一共得到27颗星。",
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "key": "8074afe2"
+ },
+ {
+  "text": "太棒了！一共得到28颗星。",
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "key": "c5a2d7e1"
+ },
+ {
+  "text": "太棒了！一共得到29颗星。",
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "key": "35bfc180"
+ },
+ {
+  "text": "太棒了！一共得到30颗星。",
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "key": "66cfc34e"
+ }
+]
