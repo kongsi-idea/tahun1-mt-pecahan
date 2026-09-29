@@ -1779,5 +1779,18 @@ hero.setup({ shape: 'circle', flavor: 'watermelon', layout: 'center' });
 hero.cutEnabled = false;
 setInterval(() => { if (UI.home.classList.contains('is-active') && hero.pieces[0] && !(hero.pieces[0].wob > 0.2)) { hero.pieces[0].wob = 0.35; hero.pieces[0].wobT = 0; } }, 3200);
 
+// 点子铺的「排行榜」按钮用 ?board=1 深链：直接打开排行榜（本班或全部）
+try {
+  if (new URLSearchParams(location.search).get('board') === '1') {
+    (async () => {
+      if (hasDB() && new URLSearchParams(location.search).get('code')) {
+        const r = await loadRoster();
+        if (r.length) Player.playCode = r[0].playCode;
+      }
+      openBoard();
+    })();
+  }
+} catch (e) { /* 旧浏览器没有 URLSearchParams 就算了 */ }
+
 // 测试用：暴露场景（不影响课堂使用）
 window.__pecahan = { scene, hero, G, startMode, SHOP_ORDERS, SHARE_LEVELS, allVoiceLines, Player };

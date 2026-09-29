@@ -201,6 +201,10 @@ with sync_playwright() as p:
     shot(page, '21-portrait')
     page.set_viewport_size({'width': W, 'height': H})
 
+    # ── 点子铺排行榜深链 ?board=1 ──
+    page.goto(URL + '&board=1'); page.wait_for_timeout(2000)
+    check('?board=1 直接打开排行榜', page.is_visible('#boardOverlay') and '林美美' in page.inner_text('#boardList'))
+
     check('没有 JS 报错', not errors, ' | '.join(errors[:3]))
     br.close()
 
