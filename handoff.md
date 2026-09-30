@@ -21,4 +21,4 @@
 - `vercel link` 会产生 `.env.local`（已 gitignore）。
 
 ## 🕐 最后更新
-2026-09-30｜Claude Code（Opus 5.5）@ 本机 Mac｜Git：待推
+2026-09-30｜Claude Code（Opus 5.5）@ 本机 Mac｜Git：✅ 已推（工具 32d8e9a／teaching-tools 9d0c1ec／kongsi-idea cc7cd83）
