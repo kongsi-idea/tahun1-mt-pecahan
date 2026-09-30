@@ -1,59 +1,24 @@
 # tahun1-mt-pecahan（燕菜切切乐）交接档
 
-> 状态：**v1.0 已上线**（2026-09-29）｜工具 https://tahun1-mt-pecahan.vercel.app ｜点子铺已登记（含 DSKP 3.1/3.2 索引、排行榜）
+> 设计决定与模式说明在 `agents.md`，本档只记现在停在哪。
 
-## 这个工具在做什么
-一年级数学 DSKP 3.0 分数（3.1 二等份和四等份：1/2、1/4、2/4、3/4；3.2 日常应用题）。
-灵感来自老师分享的 artifact「Melon Jelly Knife」（WebGPU 3D 软体果冻，划线就切）——只借点子与手感，代码全部自写。
+## ⏯️ 目前做到哪
+2026-09-29 v1.0 上线：工具部署到 Vercel、点子铺登记（TOOLS＋5 张正式网址截图＋DSKP 3.1/3.2 索引＋coverage 一行）、Supabase 排行榜 migration 已执行，并补了点子铺 `?board=1` 深链。
 
-三个模式：
-- **分给朋友（学一学，5 关）**：2 或 4 位动物朋友围着桌子，学生划线切燕菜 → 按「切好了」→ 燕菜分到朋友盘上。
-  切歪了照样分下去，拿到小块的朋友会说「我的比较小…」——**核心教学点：不一样大就不是几分之一**（反例设计）。
-  2 位朋友切成 4 块一样大也接受（每人 2/4，提示「跟二分之一一样多」）。
-- **燕菜铺开张（考一考，10 位客人）**：三种题型
-  - `cut`：客人要 n/d → 先切成 d 块一样大（验块数＋验等大）→ 点选 n 块 → 给客人（打包盒）
-  - `recog`：已切好、拿走几块（盘上留虚线空位）→ 选「拿走了几分之几」
-  - `isit`：亮起一块 → 「这块是 1/4 吗？」含不等分反例、长条四等分正例
-- **自由切（老师示范）**：圆／正方形／长方形任意切，全部等大时显示 n 分之一（最多到十分之一），不等大显示最大是最小的几倍。
+## 🚦 目前状态
+- 可用：三个模式、预录人声、手机竖屏／横屏、班级名单＋排行榜。正式站跑过 `test-e2e.py`、`test-mobile.py` 全过；真实 Supabase 读取实测 200，排行榜目前为空。
+- 工具 commit `65c3dad`（?board=1）；点子铺 commit `f665748`，alias `kongsi-idea.vercel.app` 已指向新部署并 curl 确认。
+- 老师 09-29 实测：游戏整体 OK；手机版之后才做，老师还没用真手机玩过。
 
-## 关键设计决定（改之前先看）
-- **2D 俯视＋厚度，不用 3D**：3D 透视会让近的块看起来比较大，正好破坏「一样大」的判断；也避开学校旧电脑不支援 WebGPU。
-- **几何在共用「原位坐标」里做**（单位＝圆半径），块与块的缝隙、飞到盘子都只是视觉位移，所以面积判定精确。等大容差 max/min ≤ 1.12。
-- **帮手刀（吸附）**：笔划角度在 0/45/90/135° ±16° 内、离整盘中心或任一块重心 0.2 单位内，就对齐成标准切线；否则照手画切。关掉就完全照手切（老师示范「切歪」用）。偏好存 localStorage。
-- 只切「刀划过」的块：学生只划过半边，就只切那半边，会得到 3 块不等大——这是刻意保留的反例机会。
-- **朗读＝预录人声**（09-29 老师反映浏览器朗读「不够自然」后改）：`gen-voice.py` 从网页 `allVoiceLines()` 取出全部句子，用 edge-tts（本机已装）生成 mp3 到 `audio/`，档名＝FNV-1a(声音|句子)，`audio/manifest.js` 列出已录的句子。
-  旁白＝晓晓 `zh-CN-XiaoxiaoNeural`（-8% 语速）；动物客人男生＝云夏 `YunxiaNeural`、女生＝晓伊 `XiaoyiNeural`（女生名单见 `GIRL_ANIMALS`）。
-  **改了 app.js 里 `SAY` 的任何一句，都要重跑 `python3 gen-voice.py`**，否则那句会退回浏览器朗读（macOS 已排除 Eddy/Grandpa 等搞怪声音）。句子刻意不含「学生切了几块」这种不可预期的数字，才能全部预录；目前 89 句、约 2.5MB。
-- 角色用 Twemoji（jsdelivr CDN），不手拼 SVG 角色（STYLES.md 铁律）。音效全部 WebAudio 合成，无音档。
+## ➡️ 下一步
+1. 老师对课本分数单元（第 40–42 页）：「二分之一」读法、直式写法、「燕菜」叫法。
+2. 学校 Windows 电脑、课室一体机实测划线手感与声音。
+3. 改版时照 `teaching-tools/agents.md`「每次上线新版本 Hub 必须同步」五步走。
 
-## 视觉
-风格库 §05 南洋在地（首次使用），提亮成白天娘惹糕点铺：娘惹花砖地、kopitiam 大理石圆桌、娘惹瓷盘、店屋招牌木＋金字。
-字体：Ma Shan Zheng（招牌）＋ ZCOOL KuaiLe（按钮/标题）＋ Noto Sans SC（学生要读的分数名称，用标准字形）＋ Baloo 2（数字）。
-燕菜口味：西瓜、斑斓椰浆、玫瑰、芒果、咖啡（侧面看得到分层）。
+## ⚠️ 注意事项
+- **kongsi-idea 数据库密码 09-29 误显示在对话记录里**（遮罩正则漏了全角冒号），待老师在 Supabase 重设并更新 `kongsi-idea/supabase/.secrets.local.md`。前端 anon key 不受影响。
+- 自由切切到 8 块以上时，小屏幕上分数牌会挤（小问题，未修）。
+- `vercel link` 会产生 `.env.local`（已 gitignore）。
 
-## 手机版面（09-29 加）
-- 竖屏（`computeLayout` 的 `portrait`）：朋友改坐上下、打包盒在下方，桌子撑满宽度；下排朋友的气泡放头像下面。面板在桌子下方，整页可滚动。
-- 横放手机（`shortLand`：高 < 460 且宽高比 > 1.3）：左右两栏、顶栏变薄，桌子上下略超出画面，四位朋友坐扁一点（±30°/±150°）。
-- 小屏幕燕菜占盘子比例较大（`jellyFit` 1.28）。实测燕菜直径：390×844 竖屏 157px、360×740 竖屏 144px、844×390 横屏 139px。
-- `python3 test-mobile.py`：三种手机尺寸＋真触控事件（CDP touch）划线切、点选、送客人，检查无横向溢出、招牌不被切、横屏按钮不用滚动可见。
-
-## 测试
-`python3 -m http.server 8931` 后跑 `python3 test-e2e.py`（Python Playwright），三个模式走完 39 项检查，截图在 `.playwright-output/`。
-`window.__pecahan` 暴露场景给测试用。
-
-## 上线纪录（2026-09-29）
-- GitHub `kongsi-idea/tahun1-mt-pecahan`；Vercel 项目 `tahun1-mt-pecahan`（kongsi-idea team）。工具 commit `cc67db1` → `bde2c59` → `65c3dad`（?board=1 深链）。
-- Supabase（kongsi-idea project `gntnkhkkgonaehapcerr`）：`kongsi-idea/supabase/migration-2026-09-29-tahun1-mt-pecahan-scores.sql` 已执行。表 `tahun1_mt_pecahan_scores` 公开可读；写入只能透过 `submit_tahun1_mt_pecahan_score`（同班同名留最好一次，访客每局一笔）。已实测：anon 直接 insert 被 RLS 挡（401）、超出满分被拒、测试资料已删。
-- 只有「燕菜铺开张」上排行榜（满分 30 星）。进店前「谁来当店长」：有 ?code= 就点名单；没有可写名字当访客，或不写名字（不上榜）。共用「换班级」按钮只在首页显示（游戏中会压住声音按钮）。
-- 点子铺 commit `f665748`，`vercel --prod` → alias `kongsi-idea.vercel.app` → curl 确认线上 app.js／dskp-index.js 有新工具、缩图 200；浏览器实测卡片、详情、开始使用链接、搜 perempat 都正常。
-- 测试：`test-e2e.py`（默认拦截 Supabase、带假名单 ?code=TEST-1I，不会写进真排行榜；`TARGET=线上网址` 可测正式站）、`test-mobile.py`。
-
-## 已知问题／待办
-- 老师 09-29 实测：游戏整体 OK；朗读已改预录人声，待老师再听一次确认
-- 没有一年级数学课本分数单元原文，读法「二分之一」与直式写法待对课本
-- 「燕菜」叫法待老师确认
-- Windows 学校电脑与课室一体机触控未实测
-- 自由切切到 8 块以上时，小屏幕上分数牌会挤
-
-## 下一步
-等课堂反馈。改版时照 teaching-tools/agents.md「每次上线新版本 Hub 必须同步」五步走（version/changelog、正式网址重截图、coverage 备注、tools-status、Hub 部署三步）。
+## 🕐 最后更新
+2026-09-30｜Claude Code（Opus 5.5）@ 本机 Mac｜Git：待推
